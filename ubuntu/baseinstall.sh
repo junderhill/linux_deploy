@@ -2,7 +2,7 @@
 
 sudo apt-get update
 
-sudo apt-get install -y vim git thefuck zsh htop slurm build-essential tmux cmake libpython2.7-dev
+sudo apt-get install -y vim git zsh htop slurm build-essential tmux cmake libpython2.7-dev
 
 git config --global user.email "jason@junderhill.com"
 git config --global user.name "Jason Underhill"
