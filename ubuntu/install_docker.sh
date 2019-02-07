@@ -1,10 +1,10 @@
 #!/bin/bash
 
-apt-get update
-apt-get install -y curl
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge"
-apt-get install -y docker-ce
-systemctl status docker
-usermod -aG docker ${USERNAME}
+sudo apt-get update
+sudo apt-get install -y curl
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable edge"
+sudo apt-get install -y docker-ce
+sudo systemctl status docker
+sudo usermod -aG docker ${USERNAME}
 
