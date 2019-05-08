@@ -13,6 +13,10 @@ git config --global user.name "Jason Underhill"
 cp .zshrc $HOME/
 sudo usermod -s /usr/bin/zsh $(whoami)
 
+# Add ZSH packages that need cloning
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 mkdir $HOME/Packages
 
 cd $HOME/Packages
@@ -20,16 +24,6 @@ git clone https://github.com/junderhill/VimConfig.git
 cd VimConfig
 
 ./configureVim.sh
-
-# Ruby and RVM
-sudo apt-add-repository -y ppa:rael-gc/rvm
-
-sudo apt-get update
-sudo apt-get install -y rvm
-
-source /etc/profile.d/rvm.sh
-source ~/.bashrc
-sudo usermod -aG rvm ${USERNAME}
 
 
 if hash chsh >/dev/null 2>&1; then
